@@ -46,6 +46,9 @@ a{
 .centrato{
     margin-inline: auto;
 }
+.text-center{
+    text-align: center;
+}
 
     /* GENERALI */
 nav{
@@ -66,7 +69,15 @@ button{
     color:var(--white);
     padding: 10px;
     border-radius: 10px;
-
+}
+h2{
+    margin-block: 2rem;
+}
+h6{
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-block: 10px;
+    color: var(--white);
 }
 
 nav.container{
@@ -103,6 +114,7 @@ i.cerchio{
     background-color:var(--dark-gray) ;
 }
 main{
+    height: 90vh;
     width: 60%;
     background-color: #141922;
     overflow-y: auto;
@@ -125,6 +137,16 @@ main{
  }
  section.content{
     padding: 20px;
+ }
+ .card{
+    flex-basis:calc(100% / 2 - 10px);
+ }
+ .card span{
+    color: var(--gray);
+    text-transform: capitalize;
+ }
+ .cards{
+    column-gap: 10px;
  }
         /* XS */
  @media screen and (max-width:576px){
