@@ -69,9 +69,15 @@ button{
     color:var(--white);
     padding: 10px;
     border-radius: 10px;
+    text-transform: uppercase;
 }
 h2{
     margin-block: 2rem;
+    color: var(--white);
+}
+h4{
+    color: var(--gray);
+    margin-bottom: 1rem;
 }
 h6{
     font-size: 20px;
@@ -148,6 +154,10 @@ main{
  .cards{
     column-gap: 10px;
  }
+ .for-you h2,.most-popular h2{
+    margin-bottom: 0;
+ }
+ 
         /* XS */
  @media screen and (max-width:576px){
     .hidden{
@@ -189,6 +199,9 @@ main{
         flex-basis: calc(100% / 5 - 10px);
         word-break: break-all;
     }
+    .card{
+        flex-basis: calc(100% / 4 - 10px);
+    }
  }
 
         /* LARGE */
@@ -204,5 +217,8 @@ main{
     }  
     .title h5{
         flex-basis: auto;
+    }
+    .card{
+        flex-basis: calc(100% / 6 - 10px);
     }
  }
