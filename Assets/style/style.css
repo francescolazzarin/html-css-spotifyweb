@@ -270,6 +270,29 @@ main{
     section.content h5>a:hover{
         color: var(--white);
     }
+    .card figure i.hidden{
+       display: none;
+       position: absolute;
+       top:50%;
+       left: 50%;
+       margin-top: -30px;
+       margin-left: -30px;
+
+    }
+    .card figure{
+        position: relative;
+    }
+    .card figure:hover img{
+        filter: grayscale(0.4);
+    }
+    .card figure:hover i.hidden{
+        display:inline-block;
+        color: var(--white);
+        font-size: 60px;   
+    }
+    button:hover{
+        scale:110%;
+    }
  }
 
 
