@@ -57,12 +57,14 @@ nav{
 }
 footer{
     height: 100px;
-    background-color:var(--gray);
+    background-color:rgb(31, 31, 31);
     color:var(--white);
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
+    padding-inline: 10px;
+    z-index: 2;
 }
 hr{
     margin-block: 10px;
@@ -117,7 +119,7 @@ ul.top li:first-child a{
     font-size: 1.5rem;
     color:var(--white);
 }
-ul.top li:nth-child(2):before{
+ul.top li:nth-child(2)::before{
     content: '\2758';
     color: lime;
     position: relative;
@@ -144,13 +146,13 @@ main{
 }
  section.top{
     background-color: var(--dark-gray);
-    opacity: 0.5;
+    opacity: 0.7;
     padding: 1.5rem;
     justify-content: flex-end;
     position: fixed;
     left: 40%;
     right: 0;
-    /* height: 100px; */
+    z-index: 1;
  }
  section.content{
     margin-top:100px;
@@ -160,16 +162,13 @@ main{
     row-gap: 20px;
     justify-content: center;
  }
-.title h5:first-child:before{
+.title h5:first-child::before{
     content:'\2015';
     color: lime;
     position: relative;
     top:50%;
     left: 50%;
     display: inline-block;
-    position: relative;
-    top: 50%;
-    left: 50%;
     height: 0px;
     margin-top: -12px;  
     font-size: 20px; 
@@ -194,7 +193,65 @@ main{
  .for-you h2,.most-popular h2{
     margin-bottom: 0;
  }
- 
+ .card figure i.hidden{
+    display: none;
+ }
+ .footer-l,.footer-r{
+    flex-basis: 25%;
+    align-items: center;
+ }
+ .footer-l h6{
+    margin:0;
+ }
+ .footer-c{
+    flex-basis: 50%;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+ }
+ .footer-c .bottom{
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+ }
+ .footer-c .bottom .bg-white{
+    background-color: var(--white);
+    width: 10%;
+ }
+ .footer-c .bottom .bg-gray{
+    width: 50%;
+    background-color: #A3A3A3;
+ }
+ .footer-c div.top{
+    column-gap: 25px;
+ }
+ .footer-c div.bottom div{
+    height: 8px;
+ }
+ .current{
+    width: 15%;
+ }
+ .footer-l div h6::after{
+    font-family: "Font Awesome 5 Free";
+    content:"\f004";
+    font-weight: 400;
+    color: var(--white);
+    opacity: 0.5;
+    margin-left: 1.5rem;
+
+ }
+ .footer-l div span::after{
+    content: "\f07b";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    color: var(--white);
+    opacity: 0.5;
+    margin-left: 1rem;
+ }
+ .footer-r{
+    align-items: center;
+    column-gap: 10px;
+ }
         /* XS */
  @media screen and (max-width:576px){
     .hidden{
@@ -271,7 +328,6 @@ main{
         color: var(--white);
     }
     .card figure i.hidden{
-       display: none;
        position: absolute;
        top:50%;
        left: 50%;
